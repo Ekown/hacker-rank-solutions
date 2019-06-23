@@ -2,14 +2,12 @@
 // (https://www.hackerrank.com/challenges/the-birthday-bar/problem)
 function birthday(s, d, m) {
     // Checks for arrays with length of 1
-    if ((s.length == 1)) {
+    if (s.length == 1)
         return (s[0] == d) ? 1 : 0;
-    }
 
-    // Checks for single element-valued arrays
-    if (isSingleIntArray(s)) {
+    // Checks for single value arrays
+    if (isSingleIntArray(s))
         return (s[0] == d) ? s.length : 0;
-    }
 
     // Default value for number of ways is 0
     let numberOfWays = 0;
@@ -31,7 +29,7 @@ function birthday(s, d, m) {
     return numberOfWays;
 }
 
-// Checks if the array contains only a single integer value instances
+// Checks if the array contains only single integer value instances
 function isSingleIntArray(arr) {
     const sumOfArrayElements = arr.reduce((total, el) => {
         return total + el;
